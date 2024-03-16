@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---GOOGLE FONT Import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#">
+            <div id="logo-wrapper">
+                <svg width="80" height="80" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="90" height="90" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_73_23" transform="scale(0.0111111)"/>
+                    </pattern>
+                    <image id="image0_73_23" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEEUlEQVR4nO2dS4hWdRiHny5qgYUahAihtIgK2hQVgqCN5aoWCS1aTpfRgQZppSmKgYIDUZK4sYIIWyjtwqYMDLpCDUVQi5LpptUsxoKB8kLDiT/8BoYPv/Od7/N87znn8/fAuzuX933mP+cG8xswxhhjjDHGGGOMuTpYDIwDfwAZMAv8BUwDU6qvgUngM+Ak8DZwENgJDAOPAg8AtwFLqB83qLcH1euwej+oWU5qtknNOj/3tFzMys3vwAE565oDOkhZNQf8BEwArwBbgSFgFf1nlc61VRIn1MtcyTMmZ10zv5Ij6k/gXWA7sE4rrVeuB+4DtgFvAT8Hz9E1WYV1HngfeA5YU6DXNdr2A+1bZe+NEp21VLpOPt2y0m8EngE+r0F/AyM6U50BtqjO1qCfvoq+F1gLPAxsBp4ERoDngRd0ozsKfAR8D5yrwfCd6px6PaXeXwZ2aKYRzbhZM6+Vg76L7oUlwGpgIzC64M4/1Yc7/+VqTuea0LlH1cvqK3jsrKXoPG4GHgH2AO8Bf5cgNh3jBLBbx07nKJtS/CwKFH25x7MNwEvAj13I/UH7bNAx+k27PpK7QqzUXb4q0a2kN8vXc/p5TdtE066fT+Uwl0XaMG/lVEXWkH5SfdHp2r+lwK9oVWQN6We+ns3bucjDf1VkDeln4SWkLemLlEUXo8izec8713EFVcUVubLo4lh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVj0oIieVK5FimQ4DrwJHAZeBMaUbZEiGu4BlgcMVhbL1fNGzTCmmQ5rxuOa+ZQc9F10tzULfKdYh0PKyhgq8ofpBXvrhpU696h6OaHe5mPVyq5Q0VmHXI0Pgb3AY8CKEkUvVeLYNq3G6Qrma8u/FTSTtSTFpBV2BHhcsoqKXqo4niM6RkSyTV79kyf624qby1rqgiLWxnK2GdM2F2rQ78L6Jk/0rho0mA1IpejNttykKMmqm8waXlNymcvdwK81aDZraP0C3EUXz5TjCvSruvGsIXVWIbDL6JH0yHUHcL8C9p5QVOV2ZcgdAz4BTgMXazBwVlJd1CUgJcm8A7yq6+6IHGxSHHJavbcQzLUK7XtIP4xxZdn9VgNx7eqM3vjGlYM0pFDZ62goy4D1itVMEcYzFUid0bl3Kh+vzE8EteUa4E6lkL+hS0/ZYk/r2MM6VzqnAW7XK3N6Lb/Ug9j/9MFnr8K6TcGb8L4uJO/v8K3E5JBuSF8VkPxlk29edWFFhxjPJPnWqpscFBbrhvaxnhxm9Oz+VK//ksMYY4wxhoHkf8qQYu/faXohAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+            
+                <h1>IBDB</h1>
+            </div>
+        </a>
+ 
+            <div id="search-wrapper">
+                <input placeholder="Search..." id="searchbar" type="text">
+                <button id="submit-button">Submit</button>
+            </div>
+
+            <div #buttons-wrapper>
+                <button id="login-button">Login</button>
+                <button id="register-button">Register</button>
+            </div>
+    </nav>
+
+    <!---FIM DA NAVBAR & INICIO DO "BODY"-->
+
+        <div id="book-info" class="info-container">
+            <div id="top-section">
+                <div id="selected-book-cover" class="image-placaeholder">
+                    
+                </div>
+                    <h2 id="book-name">Book Name</h2>
+                    <h3>Overview:</h3>
+                    <article id="book-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, officiis eum! Unde voluptates dolores expedita quae placeat sint cum nulla, nam provident blanditiis, voluptatibus labore consequatur eius odio aliquam rem repellat et nihil iste nobis, aliquid magni fugiat dicta. Unde explicabo doloremque officia porro, doloribus accusantium distinctio neque deleniti assumenda aperiam consequuntur asperiores placeat nobis commodi quisquam vitae rerum. Repellat eveniet totam temporibus est praesentium laboriosam ex magni quam tempore assumenda. Facilis libero ducimus minus nam dolorum ipsa exercitationem odit obcaecati, suscipit voluptatibus placeat incidunt laudantium vero rem dolorem voluptas, eum est accusantium explicabo omnis officia voluptatum dolore natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ex sapiente perferendis officiis nisi at nihil, deserunt rem reiciendis debitis blanditiis rerum eaque! Sit nihil doloremque quaerat omnis aspernatur quod incidunt, illo culpa ex inventore praesentium magni, natus esse reiciendis magnam architecto fugit porro voluptatum dolor amet. Laborum, deserunt consequatur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam laborum autem a, odit sapiente odio facilis veritatis asperiores consequuntur, sed facere libero at cupiditate illum deserunt, excepturi quae harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi impedit maiores obcaecati modi dicta consectetur est culpa ipsa harum! Laboriosam dolor velit doloribus perspiciatis nihil est ex nobis fugiat dignissimos similique culpa debitis illum esse natus voluptatum veritatis tempore commodi, nam facere. Obcaecati commodi maxime adipisci rem distinctio praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, velit, quo ipsam tempore in aspernatur perspiciatis soluta enim sequi, temporibus distinctio eos laboriosam obcaecati ab ex eum explicabo iste beatae pariatur a illum nostrum autem alias! Quasi, nostrum, consequatur harum culpa ducimus dignissimos magni eos cupiditate, fugit voluptatem sapiente! Dolor, culpa, quibusdam est quasi laborum architecto minima officiis ullam mollitia itaque asperiores laboriosam sint nulla, facere distinctio repudiandae repellendus ut et? Nihil optio fugit alias illum placeat odit autem magnam asperiores unde temporibus. Consectetur aliquam deserunt asperiores at incidunt saepe voluptatum, eligendi consequuntur, maiores cumque suscipit animi earum nihil aut.a</article>
+
+            </div>
+
+            <div class="bottom-text-wrapper" id="synopsis-wrapper">
+                <h3>Synopsis:</h3>
+                <article id="book-synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, officiis eum! Unde voluptates dolores expedita quae placeat sint cum nulla, nam provident blanditiis, voluptatibus labore consequatur eius odio aliquam rem repellat et nihil iste nobis, aliquid magni fugiat dicta. Unde explicabo doloremque officia porro, doloribus accusantium distinctio neque deleniti assumenda aperiam consequuntur asperiores placeat nobis commodi quisquam vitae rerum. Repellat eveniet totam temporibus est praesentium laboriosam ex magni quam tempore assumenda. Facilis libero ducimus minus nam dolorum ipsa exercitationem odit obcaecati, suscipit voluptatibus placeat incidunt laudantium vero rem dolorem voluptas, eum est accusantium explicabo omnis officia voluptatum dolore natus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam laborum autem a, odit sapiente odio facilis veritatis asperiores consequuntur, sed facere libero at cupiditate illum deserunt, excepturi quae harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam laboriosam temporibus aspernatur accusamus, eius praesentium sint asperiores? Necessitatibus, aliquam?</article>
+            </div>
+        </div>
+
+        <div class="title-divider">
+            <p id="meet-the-author">Meet the Author</p>
+        </div>
+
+        <div id="author-info" class="info-container">
+            <div id="top-section">
+                <div id="author-photo" class="image-placaeholder"></div>
+
+                    <h2 id="book-name">Author Name</h2>
+                    <h3>Biography:</h3>
+                    <article id="book-synopsis"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus atque nostrum voluptatum error. Nostrum, omnis illum. Facere dolorem eveniet, vel, error aliquid quaerat praesentium eaque enim itaque dolor in obcaecati quae a nam. Vel magnam ipsum libero a optio doloremque officiis provident sint, harum sed perferendis accusamus voluptas ex quod omnis laborum ad est odit distinctio mollitia velit numquam. Dolorum unde reprehenderit optio ipsam placeat voluptatum numquam molestias culpa, dignissimos error vitae debitis hic eos a qui at? Accusamus id soluta natus ipsam pariatur. Molestias adipisci autem eos mollitia accusamus ipsa ad optio unde quia. Praesentium nostrum doloremque ullam ab, officia nam impedit? Nulla modi enim quisquam. Sapiente officiis eum voluptatum, temporibus veritatis natus neque suscipit maxime dicta sunt eligendi possimus obcaecati fugit, reiciendis, expedita doloribus. Nisi aliquid unde nobis alias modi quos! Earum, rerum enim repellendus, ducimus voluptatum nemo placeat aliquid repudiandae autem, ipsam error nobis eum reiciendis. Nihil asperiores illo repellat soluta libero eum ipsa, perferendis, impedit cum dolorum quis id deserunt? Aspernatur fugiat doloribus, sunt dolore deleniti aut, iure praesentium itaque est autem, incidunt nemo iste. Doloribus pariatur excepturi tenetur praesentium suscipit ipsa laudantium! Autem consequuntur iusto commodi nam ipsam cum. Commodi aspernatur adipisci beatae in rerum odio accusantium iure provident veniam. Dolores aspernatur vero amet quis quas! In possimus ut velit ea voluptatem. Nisi tempora, commodi repudiandae cum ullam id, iste quidem maiores, dolorem architecto quibusdam soluta! Autem provident quod tempore, pariatur facilis impedit soluta nam ipsa magni non, eveniet cum esse incidunt. Qui laudantium minima veritatis odit eos, veniam hic necessitatibus, accusantium dolorum numquam, beatae quod facere esse placeat temporibus deserunt explicabo! Ipsam cumque, odio reiciendis voluptates maiores repellat fugit non ullam. Aut porro magnam recusandae! Accusantium saepe qui praesentium eaque nemo aut quae inventore aliquid rerum maxime illo, quasi placeat dolorem a sunt quos repellendus reiciendis dignissimos amet nisi? Incidunt facere fugit explicabo voluptas eos placeat rem amet, autem dolores nihil quam, quos excepturi nesciunt modi aliquam impedit ad, iusto cupiditate accusantium accusamus maiores! Debitis accusamus sapiente adipisci voluptatibus enim modi quia qui alias tenetur reiciendis et perspiciatis beatae cupiditate ut, delectus recusandae temporibus, eius, illo dignissimos unde. Saepe, odit praesentium hic, natus nihil quam obcaecati ipsam quia cum, deserunt vero doloremque similique debitis facilis impedit nesciunt omnis dignissimos alias. Atque, culpa reprehenderit. Consectetur repudiandae harum, eveniet ipsa fuga earum, dolor explicabo adipisci dolorem voluptatem autem quae laborum. Exercitationem libero ullam ducimus ipsam minima quidem, deleniti magni necessitatibus earum a labore, temporibus vero eum, voluptatem quia unde deserunt qui eaque fugiat blanditiis quo repellat modi sed amet! Quasi dolore alias non iusto illo, fugiat harum beatae deleniti repellat. Quis unde, distinctio praesentium exercitationem ea deserunt reiciendis repudiandae doloribus nemo ducimus commodi iure ex in sed saepe quaerat nulla autem facilis cum cupiditate enim cumque numquam? Sunt totam placeat molestias alias maiores quisquam! Fuga recusandae omnis porro optio quia iure adipisci unde non aperiam veritatis labore ratione, eum dolores deleniti similique distinctio neque exercitationem a, totam beatae excepturi dicta facere. Amet dolores obcaecati alias nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, officiis eum! Unde voluptates dolores expedita quae placeat sint cum nulla, nam provident blanditiis, voluptatibus labore consequatur eius odio aliquam rem repellat et nihil iste nobis, aliquid magni fugiat dicta. Unde explicabo doloremque officia porro, doloribus accusantium distinctio neque deleniti assumenda aperiam consequuntur asperiores placeat nobis commodi quisquam vitae rerum. Repellat eveniet totam temporibus est praesentium laboriosam ex magni quam tempore assumenda. Facilis libero ducimus minus nam dolorum ipsa exercitationem odit obcaecati, suscipit voluptatibus placeat incidunt laudantium vero rem dolorem voluptas, eum est accusantium explicabo omnis officia voluptatum dolore natus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam laborum autem a, odit sapiente odio facilis veritatis asperiores consequuntur, sed facere libero at cupiditate illum deserunt, excepturi quae harum!</article>
+
+            </div>
+            
+            <div class="bottom-text-wrapper" id="synopsis-wrapper">
+                <h3>Releases:</h3>
+                <article id="book-synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, officiis eum! Unde voluptates dolores expedita quae placeat sint cum nulla, nam provident blanditiis, voluptatibus labore consequatur eius odio aliquam rem repellat et nihil iste nobis, aliquid magni fugiat dicta. Unde explicabo doloremque officia porro, doloribus accusantium distinctio neque deleniti assumenda aperiam consequuntur asperiores placeat nobis commodi quisquam vitae rerum. Repellat eveniet totam temporibus est praesentium laboriosam ex magni quam tempore assumenda. Facilis libero ducimus minus nam dolorum ipsa exercitationem odit obcaecati, suscipit voluptatibus placeat incidunt laudantium vero rem dolorem voluptas, eum est accusantium explicabo omnis officia voluptatum dolore natus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam laborum autem a, odit sapiente odio facilis veritatis asperiores consequuntur, sed facere libero at cupiditate illum deserunt, excepturi quae harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam laboriosam temporibus aspernatur accusamus, eius praesentium sint asperiores? Necessitatibus, aliquam?</article>
+            </div>
+        </div>
+
+        <div class="title-divider">
+            <p id="book-suggestions">You May Also Like</p>
+        </div>
+
+    
+
+        <div class="book-list-container">
+
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+            
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+            
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+
+            <div class="book-display-wrapper">
+                <a href="#">
+                    <div class="book-cover"></div>
+                    <div class="book-title">
+                        <p>BOOK TITLE</p>
+                    </div>
+                </a>
+                <div class="book-author">
+                    <p>AUTHOR NAME</p>
+                </div>
+            </div>
+
+        </div>
+        
+<!-- FOOTER -->
+
+        <footer>
+            <a href="#">
+                <div id="logo-wrapper">
+                    <svg width="80" height="80" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="90" height="90" fill="url(#pattern0)"/>
+                        <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_73_23" transform="scale(0.0111111)"/>
+                        </pattern>
+                        <image id="image0_73_23" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEEUlEQVR4nO2dS4hWdRiHny5qgYUahAihtIgK2hQVgqCN5aoWCS1aTpfRgQZppSmKgYIDUZK4sYIIWyjtwqYMDLpCDUVQi5LpptUsxoKB8kLDiT/8BoYPv/Od7/N87znn8/fAuzuX933mP+cG8xswxhhjjDHGGGOMuTpYDIwDfwAZMAv8BUwDU6qvgUngM+Ak8DZwENgJDAOPAg8AtwFLqB83qLcH1euwej+oWU5qtknNOj/3tFzMys3vwAE565oDOkhZNQf8BEwArwBbgSFgFf1nlc61VRIn1MtcyTMmZ10zv5Ij6k/gXWA7sE4rrVeuB+4DtgFvAT8Hz9E1WYV1HngfeA5YU6DXNdr2A+1bZe+NEp21VLpOPt2y0m8EngE+r0F/AyM6U50BtqjO1qCfvoq+F1gLPAxsBp4ERoDngRd0ozsKfAR8D5yrwfCd6px6PaXeXwZ2aKYRzbhZM6+Vg76L7oUlwGpgIzC64M4/1Yc7/+VqTuea0LlH1cvqK3jsrKXoPG4GHgH2AO8Bf5cgNh3jBLBbx07nKJtS/CwKFH25x7MNwEvAj13I/UH7bNAx+k27PpK7QqzUXb4q0a2kN8vXc/p5TdtE066fT+Uwl0XaMG/lVEXWkH5SfdHp2r+lwK9oVWQN6We+ns3bucjDf1VkDeln4SWkLemLlEUXo8izec8713EFVcUVubLo4lh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVh0EBYdhEUHYdFBWHQQFh2ERQdh0UFYdBAWHYRFB2HRQVj0oIieVK5FimQ4DrwJHAZeBMaUbZEiGu4BlgcMVhbL1fNGzTCmmQ5rxuOa+ZQc9F10tzULfKdYh0PKyhgq8ofpBXvrhpU696h6OaHe5mPVyq5Q0VmHXI0Pgb3AY8CKEkUvVeLYNq3G6Qrma8u/FTSTtSTFpBV2BHhcsoqKXqo4niM6RkSyTV79kyf624qby1rqgiLWxnK2GdM2F2rQ78L6Jk/0rho0mA1IpejNttykKMmqm8waXlNymcvdwK81aDZraP0C3EUXz5TjCvSruvGsIXVWIbDL6JH0yHUHcL8C9p5QVOV2ZcgdAz4BTgMXazBwVlJd1CUgJcm8A7yq6+6IHGxSHHJavbcQzLUK7XtIP4xxZdn9VgNx7eqM3vjGlYM0pFDZ62goy4D1itVMEcYzFUid0bl3Kh+vzE8EteUa4E6lkL+hS0/ZYk/r2MM6VzqnAW7XK3N6Lb/Ug9j/9MFnr8K6TcGb8L4uJO/v8K3E5JBuSF8VkPxlk29edWFFhxjPJPnWqpscFBbrhvaxnhxm9Oz+VK//ksMYY4wxhoHkf8qQYu/faXohAAAAAElFTkSuQmCC"/>
+                        </defs>
+                        </svg>
+                
+                    <h1>IBDB</h1>
+                </div>
+            </a>
+
+            <div id="footer-slogan-wrapper">
+                <article>Embark on your literary journey today! Browse books by genre, author details, and concise synopses! </article>
+            </div>
+        </footer>
+
+    
+</body>
+</html>
