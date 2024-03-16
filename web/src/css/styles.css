@@ -5,16 +5,20 @@
 
     
 body {
-    color: #000;
-    background-color: white;
-    background-image: url(./img/Fundo.png);
-    
+    font-family: 'League Spartan', sans-serif; 
+    overflow-x: hidden;
+    background-color: black;
+    width: 100vw;
+    height: fit-content;
+    background-image: url(media/gradientbg.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-main {
-    padding: 0px 10vw;
-
-}
 
 header{
     
@@ -35,7 +39,18 @@ a {
     text-decoration: none;
 }
 
-#LogoImg{
+
+*, h1 {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Inicio NavBar */
+
+
+ #LogoImg{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +62,6 @@ a {
 .menu{  
       
     font-size: 42px;
-    font-family:Open Sans;
     font-style: normal;
     display: flex;
     flex-direction: row;
@@ -56,41 +70,66 @@ a {
     gap: 60px;
 }
 
-.menu a{
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px;
+.seach-wrapper {
+    height: 4rem;
+    border-radius: 30px;
+    width: 40vw;
+    background-image: url(./img/Search.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    margin-right: 1rem;
+    transform: translateY(-3px);
 }
-.menu a:hover {
-    background-color: white;
-    border-radius: 50px;
+
+.image-placaeholder {
+
+    min-width: 35rem;
+    width: 40rem;
+    min-height: 50rem;
+    height: 55rem;
+    margin: 0 3rem 3rem 0;
+    background-color: rgb(170, 170, 170);
+    float: left;
+}
+
+#submit-button {
+    height: 4rem;
+    border-radius: 30px;
+    font-size: 2.5rem;
+    padding: 0.5rem 3rem 0 3rem;
+    margin-right: 1rem;
+}
+
+#submitBtn:hover {
+    background-color: #b6b6b6;
 }
 
 .nav-button {
     font-size: 42px;
-    font-family:Open Sans;
     font-style: normal;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+}
 
+
+#submitBtn:hover {
+    background-color: #b6b6b6;
 }
 
 #loginBtn {
    
-    font-family:Open Sans;
     font-size: 24px;
     font-weight: bold;
     color: #000;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     display: inline-block;
-    width: 100px !important;
-    
-    
+    width: 200px !important;
 }
   
 #loginBtn:hover {
@@ -99,26 +138,24 @@ a {
 
 #registerBtn {
    
-    font-family:Open Sans;
     font-size: 24px;
     font-weight: bold;
     color: #000;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     display: inline-block;
-    width: 120px !important;
-   
-}
-  
+    width: 200px !important;
+} 
 
 #registerBtn:hover {
     background-color: #b6b6b6;
-}
+} */
 
+/* Fim Navbar*/
 
-.container{
+.container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -128,54 +165,166 @@ a {
   
   input[type=text]{
     position: relative;
-    padding: 12px 50px 20px 30px;
-    width: 0px;
-    color: #525252;
+    padding: 20px;
+    width: 500px;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 100;
     letter-spacing: 2px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
-    transition: width 0.4s ease;
-    outline: none;
-    &:focus{ width: 300px; }
 }
-  
-.Filter a{
-    font-size: 42px;
-    font-family: Open Sans;
-    font-style: normal;
-    color: white;
-    display: flex;
+/* Fim da NavBar */
+
+/* Banner */
+
+/* .banner {
+    width: 100%;
+    height: 900px;
+    background-image: url(./img/books.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
     justify-content: center;
+    align-items: center;
+} */
+
+
+
+/* Inicio do Main */
+
+.title-divider {
+
+    width: 100vw;
+    height: 20rem;
     display: flex;
-    margin-top: 37%;
+    align-items: center;
+    justify-content: center;
 }
 
+.title-divider p {
 
-#Cards .card {
+color: white;
+font-size: 10rem;
+text-transform: uppercase;
+font-style: Bold;
+}
+
+.select{
+    width: 80vw;
+    height:fit-content;
+    font-size: 50px;
     display: flex;
-    flex-direction:column;
+    margin: 5rem 18rem 0;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 130px;
-    height: 130px;
-    padding: 20px;
-    gap: 20px;
 }
 
-#Cardss .card-img {
-    width: 20px;
-    height: 20px;
-    text-align: left;
-    
+#car-select{
+    width: 250px;
+    height: 50px;
+    background-color: #ABABAB;
+    border-radius: 10px;
+    text-align: center;
 }
 
-#Cards .card-description {
-    margin: 0 auto;
+.Submit{
+    width: 250px;
+    height: 50px;
+    background-color: #FF6A3C;
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+
+.container{
+
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
     display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    align-items: flex-end;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    width: 100%;
+    background-color: #FF6A3C;
+    padding: 70px 0;
+}
+.footer-col{
+    
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    font-family: 'League Spartan', sans-serif; 
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+  content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+    .footer-col{
+    width: 100%;
+}
 }
