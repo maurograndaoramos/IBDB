@@ -20,7 +20,6 @@ RUN poetry export --without-hashes --format=requirements.txt > requirements.txt
 # # Install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN pip install mysql-connector-python
 
 EXPOSE 8001
-
-CMD [ "poetry", "run", "python", "src/main.py" ]
