@@ -69,7 +69,7 @@ body {
     background-color: black;
     width: 100vw;
     height: fit-content;
-    background-image: url(img/gradientbg.png);
+    background-image: url(../img/gradientbg.png);
     background-size: auto;
     background-repeat: no-repeat;
     display: flex;
@@ -83,20 +83,6 @@ body {
   
 /*----------------------------------------*/
 /*CLASSES*/
-
-
-
-/*.background-image {
-    width: 100vw;
-    height: 300vh;
-    background-image: url(img/gradientbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}*/
-
-
-
 
 .info-container {
     padding: 3rem;
@@ -160,7 +146,7 @@ text-transform: uppercase;
     width: 40rem;
     height: 55rem;
     background-color: blue;
-    background-image: url(/IBDB/web/src/img/sample-book.png); /*Popular */
+    background-image: url(../img/sample-book.png); /*Popular */
     background-size: contain ;
     margin-bottom: 1rem;
     
@@ -232,7 +218,7 @@ h1 {
     height: 4rem;
     border-radius: 30px;
     width: 40vw;
-    background-image: url(img/Search.png);
+    background-image: url(../img/Search.png);
     background-size: 2.5rem;
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
@@ -294,13 +280,13 @@ h1 {
 }
 
 #selected-book-cover {
-    background-image: url(/IBDB/web/src/img/sample-book.png);
+    background-image: url(../img/sample-book.png);
     background-size: contain ;
     background-position: center;
 }
 
 #author-photo {
-    background-image: url(/IBDB/web/src/img/stephen-king.jpg);
+    background-image: url(../img/stephen-king.jpg);
     background-size: cover;
     background-position: center;
 }
