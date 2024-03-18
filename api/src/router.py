@@ -8,7 +8,7 @@ api_router = APIRouter(
 )
 
 db_config = {
-    "host":"localhost:33060",
+    "host":"mysql",
     "user":"user",
     "password":"password",
     "database":"db",
