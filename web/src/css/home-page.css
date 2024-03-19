@@ -29,7 +29,7 @@ article {
 }
 
 /* Adjust the size of the inputted text */
-input[type="text"] {
+input[type="text"], input[type="password"] {
     font-size: 2.5rem; /* Set the desired font size */
     text-indent: 2rem; /* Move the placeholder imput text start to the right */
     transform: translateY(3px); /*Move text imput location down 3px*/
@@ -272,6 +272,18 @@ h1 {
 }
 
 #register-button {
+    height: 4rem;
+    border-radius: 30px;
+    font-size: 2.5rem;
+    padding: 0.5rem 3rem 0 3rem;
+}
+
+.user-text{
+    font-size: 20px;
+    padding: 10px;
+}
+
+#logout-button {
     height: 4rem;
     border-radius: 30px;
     font-size: 2.5rem;

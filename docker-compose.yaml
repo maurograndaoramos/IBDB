@@ -10,44 +10,44 @@ services:
     volumes:
       - ./web/src:/app
 
-#  api:
-#    build:
-#      context: api
-#      dockerfile: Dockerfile
-#    command: sh -c "sleep 10s; poetry run; python src/main.py;"
-#    ports:
-#      - "8001:8001"
-#    volumes:
-#      - ./api/src:/app
-#    depends_on:
-#      - mysql
-#    networks:
-#      - app_network
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile
+    command: sh -c "sleep 10s; poetry run; python src/main.py;"
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./api/src:/app
+    depends_on:
+      - mysql
+    networks:
+      - app_network
   
-#  mysql:
-#    build:
-#      context: mysql
-#      dockerfile: Dockerfile
-#    restart: always
-#    command: --init-file /data/application/data.sql
-#    environment:
-#      MYSQL_DATABASE: 'db'
-#      MYSQL_USER: 'user'
-#      MYSQL_PASSWORD: 'password'
-#      MYSQL_ROOT_PASSWORD: 'password'
-#    ports:
-#      - '3306:3306'
-#    expose:
-#      - '3306'
-#    volumes:
-#      - my-db:/var/lib/mysql
-#    networks:
-#      - app_network
+  mysql:
+    build:
+      context: mysql
+      dockerfile: Dockerfile
+    restart: always
+    command: --init-file /data/application/data.sql
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+    networks:
+      - app_network
 
-#networks:  # Lists all intranet (container context) networks
-#    app_network:  # Intranet (container context) network name
-#      name: app_network
-#      driver: bridge  # Network driver type  
+networks:  # Lists all intranet (container context) networks
+    app_network:  # Intranet (container context) network name
+      name: app_network
+      driver: bridge  # Network driver type  
 
-#volumes:
-#  my-db:
+volumes:
+  my-db:
