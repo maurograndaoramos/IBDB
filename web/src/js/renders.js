@@ -24,6 +24,12 @@ const renderBookContent = (data) =>{
                 <br>
                 <h3>Author(s):</h3>
                 <article>${data.authors}</article>
+                <h3>Publication:</h3>
+                <article>${data.publishedDate}</article>
+                <h3>Pages:</h3>
+                <article>${data.pageCount}</article>
+                
+
 
 
             </div>
