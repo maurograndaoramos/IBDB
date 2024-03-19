@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL UNIQUE,
   `email` varchar(45) NOT NULL UNIQUE,
-  `password` varchar(45) NOT NULL UNIQUE,
+  `password` varchar(45),
   `hash` char(32) NOT NULL UNIQUE,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
