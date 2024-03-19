@@ -2,7 +2,7 @@ const renderBook = (id, data) =>{
     console.log(data)
     return `<a href="book_page.html?bookId=${id}" class="book-display-wrapper">
                 <div>
-                    <div class="book-cover"></div>
+                    <img class="book-cover" src="${data.imageLinks.thumbnail}"/>
                     <div class="book-title">
                         <p>${data.title}</p>
                     </div>
@@ -16,12 +16,10 @@ const renderBook = (id, data) =>{
 const renderBookContent = (data) =>{
     console.log(data)
     return `<div id="top-section">
-                <div id="selected-book-cover" class="image-placaeholder">
-                    
-                </div>
-                    <h2 id="book-name">${data.title}</h2>
-                    <h3>Overview:</h3>
-                    <article id="book-overview">${data.description}</article>
+                <img src="${data.imageLinks.thumbnail} id="selected-book-cover" class="image-placaeholder"/>
+                <h2 id="book-name">${data.title}</h2>
+                <h3>Overview:</h3>
+                <article id="book-overview">${data.description}</article>
 
             </div>
 
