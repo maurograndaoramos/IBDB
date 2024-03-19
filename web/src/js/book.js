@@ -65,6 +65,8 @@ window.onload = async() => {
         window.location.replace(`home_page.html?q=${query}`)
     }
 
+    console.log("cookie: " + getCookie("id"));
+
     if(getCookie("id") == null){
         document.getElementById("navbar").innerHTML += 
             `<div #buttons-wrapper>
@@ -81,7 +83,9 @@ window.onload = async() => {
         }
 
     }else{
+        console.log(getCookieValue("id"))
         const user = await loadUser(username, email, password, getCookieValue("id"));
+     
         document.getElementById("navbar").innerHTML += 
             `<div #buttons-wrapper>
                 <span class="user-text">Olá ${user.username}!</span>

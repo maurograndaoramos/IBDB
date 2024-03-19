@@ -31,7 +31,7 @@ window.onload = async() => {
 
         console.log(users)
 
-        if(users == "")
+        if(users.hash === undefined)
             window.alert("Utilizador não existe, por favor faça um registo!")
         else{
             console.log(users);
