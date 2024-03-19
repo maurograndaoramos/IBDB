@@ -17,17 +17,27 @@ const renderBookContent = (data) =>{
     console.log(data)
     return `<div id="top-section">
                 <img src="${data.imageLinks.thumbnail} id="selected-book-cover" class="image-placaeholder"/>
-                <h2 id="book-name">${data.title}</h2>
-                <h1>Overview:</h1>
+                <div id="book-name-wrapper">
+                    <h2 id="book-name">${data.title}</h2>
+                </div>
+                <h3>Overview:</h3>
                 <article id="book-overview">${data.description}</article>
                 <br>
                 <br>
-                <h3>Author(s):</h3>
-                <article>${data.authors}</article>
-                <h3>Publication:</h3>
-                <article>${data.publishedDate}</article>
-                <h3>Pages:</h3>
-                <article>${data.pageCount}</article>
+                <div id="bottom-section">
+                    <div id="authors-wrapper">
+                        <h4>Author(s):</h4>
+                        <article>${data.authors}</article>
+                    </div>
+                    <div id="publications-wrapper">
+                        <h4>Publication:</h4>
+                        <article>${data.publishedDate}</article>
+                    </div>
+                    <div id="pages-wrapper">
+                        <h4>Pages:</h4>
+                        <article>${data.pageCount}</article>
+                    </div>
+                </div>
                 
 
 

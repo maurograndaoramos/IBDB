@@ -94,10 +94,22 @@ body {
     margin: 8rem 0 18rem 0;
     width: 80vw;
     height: fit-content;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    font-style: normal;
+    font-size: 50rem;
 }
+
+.info-container b {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.info-container h4 {
+    font-size: 4rem;
+}
+
 
 .title-divider {
 
@@ -283,10 +295,21 @@ h1 {
     margin-bottom: 3rem;
 }
 
+
+#bottom-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
+    border: 1px solid black;
+}
+
 #selected-book-cover {
     background-image: url(../img/sample-book.png);
     background-size: contain ;
     background-position: center;
+    border: 1px solid black;
 }
 
 #author-photo {
@@ -297,7 +320,14 @@ h1 {
 
 #book-name {
     font-size: 10rem;
-    
+}
+
+#book-name-wrapper {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
 
 #author-name {
