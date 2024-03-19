@@ -22,8 +22,6 @@ const renderBookContent = (data) =>{
                 </div>
                 <h3>Overview:</h3>
                 <article id="book-overview">${data.description}</article>
-                <br>
-                <br>
                 <div id="bottom-section">
                     <div id="authors-wrapper">
                         <h4>Author(s):</h4>

@@ -302,7 +302,9 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
     gap: 3rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-top: 1px solid black;
+    margin-top: 50px;
 }
 
 #selected-book-cover {
@@ -327,7 +329,8 @@ h1 {
     max-width: 100%;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #author-name {
