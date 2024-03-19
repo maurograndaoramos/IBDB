@@ -2,12 +2,12 @@ let loadAPI = async (query='', genre='') => {
     let link = ""
 
     if(query === '' && genre === '')
-        link = 'https://www.googleapis.com/books/v1/volumes?q=fiction&orderBy=newest&maxResults=6&&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI';
+        link = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest&maxResults=6&&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI';
     else if(genre === '')
         link = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=6&&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
     else
         link = `https://www.googleapis.com/books/v1/volumes?q=${query}+${genre}&maxResults=6&&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
-    
+
     console.log("link: " + link)
     const response = await fetch (link);
     const books = await response.json();
