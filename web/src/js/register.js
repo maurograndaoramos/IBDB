@@ -56,10 +56,10 @@ window.onload = async() => {
 
         const register = await registerUser(username, email, password, hash);
 
-        if(register == "")
-            window.alert("Utilizador não existe, por favor faça um registo!")
+        const user = await loadUser(username, email, password,hash);
+        if(user.hash === undefined)
+            window.alert("Utilizador não existe, por favor faça um registo!");
         else{
-            const user = await loadUser(username, email, password,hash);
             console.log(user);
             const d = new Date();
             d.setTime(d.getTime() + (100*24*60*60*1000));
