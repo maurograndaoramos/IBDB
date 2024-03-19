@@ -1,12 +1,12 @@
-let loadAPI = async (query='', genre='') => {
+let loadAPI = async (query='', genre='', order='relevance') => {
     let link = ""
 
     if(query === '' && genre === '')
-        link = 'https://www.googleapis.com/books/v1/volumes?q=novel&orderBy=newest&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI';
+        link = `https://www.googleapis.com/books/v1/volumes?q=novel&orderBy=${order}&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`;
     else if(genre === '')
-        link = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
+        link = `https://www.googleapis.com/books/v1/volumes?q=${query}&orderBy=${order}&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
     else
-        link = `https://www.googleapis.com/books/v1/volumes?q=${query}+${genre}&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
+        link = `https://www.googleapis.com/books/v1/volumes?q=${query}+${genre}&orderBy=${order}&maxResults=6&key=AIzaSyAVEf9Ve2HWx_OdPCf7Q8Am-BA4_0zgMwI`
 
     console.log("link: " + link)
     const response = await fetch (link);
@@ -32,6 +32,7 @@ let loadBooks = (apiContent) => {
 window.onload = async() => {
     let query = "";
     let genre = "";
+    let order = "";
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -43,12 +44,13 @@ window.onload = async() => {
 
     document.getElementById("submit-button").onclick = async () => {
         query = document.getElementById("searchbar").value;
-        loadBooks(await loadAPI(query, genre));
+        loadBooks(await loadAPI(query, genre, order));
     }
 
     document.getElementById("book-filter-submit-button").onclick = async () => {
-        genre = document.getElementById("dropdown-filter").value;
-        loadBooks(await loadAPI(query, genre));
+        genre = document.getElementById("dropdown-filter-genre").value;
+        order = document.getElementById("dropdown-filter-order").value;
+        loadBooks(await loadAPI(query, genre, order));
     };
 }
 

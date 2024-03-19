@@ -54,15 +54,26 @@
         </div>
 
         <div id="book-filters">
-            <select id="dropdown-filter" class="dropdown-filter">
-                <option value="">Genre</option>
-                <option value="Romance">Romance</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Sci-fi">Science Fiction</option>
-                <option value="Business">Business</option>
-                <option value="Fiction">Fiction</option>
-            </select>
+            <div class="dropdown-div">
+                <div class="dropdown-text">Genre</div>
+                <select id="dropdown-filter-genre" class="dropdown-filter">
+                    <option value="novel">Novel</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Science Fiction</option>
+                    <option value="business">Business</option>
+                    <option value="fiction">Fiction</option>
+                </select>
+            </div>
+
+            <div class="dropdown-div">
+                <div class="dropdown-text">Order</div>
+                <select id="dropdown-filter-order" class="dropdown-filter">
+                    <option value="relevance">Relevance</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
 <!-- 
             <select class="dropdown-filter">
                 <option value="Author">Author</option>
@@ -81,9 +92,9 @@
             </select>
 
             <select class="dropdown-filter">
-                <option value="Ordem">Order [A-Z]</option>
-                <option value="Ordem">A-Z</option>
-                <option value="Ordem">Z-A</option>
+                <option value="Ordem">Order</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
                     </select> -->
 
             <button id="book-filter-submit-button">Submit</button>
