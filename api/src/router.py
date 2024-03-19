@@ -64,7 +64,7 @@ async def post_call(user_login: UserLogin):
 @api_router.post("/create_user/")
 async def post_call(user_login: UserLogin):
     username = user_login.username
-    email = user_login.email
+    email = user_login.email.lower()
     password = user_login.password
     
     connection = createConnection()
@@ -74,7 +74,6 @@ async def post_call(user_login: UserLogin):
 
     cursor.execute("insert into users (username, email, password, hash) values(%s, %s, %s, %s);", (username, email, password, random_hash))
     connection.commit()
-
     connection.close()
 
     return {"message": "User created successfully"}
