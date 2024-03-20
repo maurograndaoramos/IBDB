@@ -1,4 +1,4 @@
-let name = "";
+let query = ""
 
 const loadAPI = async (query='', genre='', order='relevance') => {
     let link = ""
@@ -71,8 +71,12 @@ let loadUser = async (username="", email="",password="",hash) => {
     return users; 
 }
 
+const search = async() =>{
+    query = document.getElementById("searchbar").value;
+    loadBooks(await loadAPI(query));
+}
+
 window.onload = async() => {
-    let query = "";
     let genre = "";
     let order = "";
     let username = ""
@@ -82,14 +86,11 @@ window.onload = async() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     
-    if(urlParams.get('q') != null)
-        loadBooks(await loadAPI(urlParams.get('q')));
-    else
+    if(urlParams.get('q') != null){
+        query = urlParams.get('q');
+        loadBooks(await loadAPI(query));
+    }else {
         loadBooks(await loadAPI());
-
-    document.getElementById("submit-button").onclick = async () => {
-        query = document.getElementById("searchbar").value;
-        loadBooks(await loadAPI(query, genre, order));
     }
 
     document.getElementById("book-filter-submit-button").onclick = async () => {

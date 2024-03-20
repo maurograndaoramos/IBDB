@@ -1,4 +1,6 @@
-let loadAPI = async (id) => {
+let query =""
+
+const loadAPI = async (id) => {
     const response = await fetch (`https://www.googleapis.com/books/v1/volumes/${id}?langRestrict=en`);
     const books = await response.json();
 
@@ -6,7 +8,7 @@ let loadAPI = async (id) => {
     //console.log(books.items[new URLSearchParams(query).get('bookId')].volumeInfo.title);
 }
 
-let loadBooks = (element) => {
+const loadBooks = (element) => {
     //console.log(apiContent)
     document.getElementById("book-info").innerHTML += renderBookContent(element.volumeInfo);
 }
@@ -16,7 +18,7 @@ const getCookie = (name) => {
     return match ? match[1] : null;
 }
 
-let loadUser = async (username="", email="",password="", hash) => {
+const loadUser = async (username="", email="",password="", hash) => {
     const url = "http://localhost:8001/api/user_hash/";
     const data = { username, email, password, hash };
 
@@ -33,6 +35,11 @@ let loadUser = async (username="", email="",password="", hash) => {
     console.log("response: " + users);
 
     return users; 
+}
+
+const search = async() =>{
+    query = document.getElementById("searchbar").value;
+    window.location.replace(`home_page.html?q=${query}`);
 }
 
 function getCookieValue(cname) {
@@ -59,11 +66,6 @@ window.onload = async() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     loadBooks(await loadAPI(urlParams.get('bookId')));
-
-    document.getElementById("submit-button").onclick = async () => {
-        query = document.getElementById("searchbar").value;
-        window.location.replace(`home_page.html?q=${query}`)
-    }
 
     console.log("cookie: " + getCookie("id"));
 
